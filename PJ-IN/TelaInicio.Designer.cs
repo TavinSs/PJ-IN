@@ -33,10 +33,10 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             pictureBox3 = new PictureBox();
-            button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -104,20 +104,6 @@
             pictureBox3.TabIndex = 17;
             pictureBox3.TabStop = false;
             // 
-            // button4
-            // 
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.FromArgb(107, 72, 142);
-            button4.Location = new Point(3, 341);
-            button4.Name = "button4";
-            button4.Size = new Size(269, 59);
-            button4.TabIndex = 3;
-            button4.Text = "Faturas";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
             // button3
             // 
             button3.FlatAppearance.BorderSize = 0;
@@ -126,7 +112,7 @@
             button3.ForeColor = Color.FromArgb(107, 72, 142);
             button3.Location = new Point(0, 594);
             button3.Name = "button3";
-            button3.Size = new Size(269, 59);
+            button3.Size = new Size(213, 59);
             button3.TabIndex = 2;
             button3.Text = "Sair";
             button3.UseVisualStyleBackColor = true;
@@ -159,6 +145,20 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button4
+            // 
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.FromArgb(107, 72, 142);
+            button4.Location = new Point(12, 341);
+            button4.Name = "button4";
+            button4.Size = new Size(269, 59);
+            button4.TabIndex = 3;
+            button4.Text = "Faturas";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // TelaInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -184,10 +184,10 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private Panel panel2;
-        private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
         private PictureBox pictureBox3;
+        private Button button4;
     }
 }

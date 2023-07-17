@@ -69,5 +69,45 @@ namespace PJ_IN
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.youtube.com/watch?v=Hy8kmNEo1i8";
+
+            try
+            {
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                };
+
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível acessar o site no momento! \nTente novamente: " + ex.Message);
+            }
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.youtube.com/watch?v=1buCERP_zOo";
+
+            try
+            {
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                };
+
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível acessar o site no momento! \nTente novamente: " + ex.Message);
+            }
+        }
     }
 }
