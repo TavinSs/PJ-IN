@@ -161,6 +161,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaExame";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaExame";
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

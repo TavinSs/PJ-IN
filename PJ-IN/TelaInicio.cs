@@ -49,5 +49,26 @@ namespace PJ_IN
                 Location = new Point(Location.X + deltaX, Location.Y + deltaY);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaEventos eventos = new TelaEventos();
+            eventos.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaExame exame = new TelaExame();
+            exame.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TelaFatura fatura = new TelaFatura();
+            fatura.Show();
+            this.Hide();
+        }
     }
 }

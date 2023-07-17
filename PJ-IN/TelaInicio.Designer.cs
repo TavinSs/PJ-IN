@@ -116,6 +116,7 @@
             button4.TabIndex = 3;
             button4.Text = "Faturas";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -142,6 +143,7 @@
             button2.TabIndex = 1;
             button2.Text = "Exames";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -155,6 +157,7 @@
             button1.TabIndex = 0;
             button1.Text = "Eventos";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // TelaInicio
             // 
@@ -165,6 +168,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaInicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaInicio";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);

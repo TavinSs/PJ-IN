@@ -157,6 +157,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaLogin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);

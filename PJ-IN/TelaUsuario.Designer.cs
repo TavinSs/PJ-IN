@@ -37,6 +37,7 @@
             ClientSize = new Size(1300, 715);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaUsuario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaUsuario";
             ResumeLayout(false);
         }

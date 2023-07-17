@@ -56,7 +56,7 @@ namespace PJ_IN
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Não foi possível abrir o URL: " + ex.Message);
+                MessageBox.Show("Não foi possível acessar o site no momento! \nTente novamente: " + ex.Message);
             }
         }
 
