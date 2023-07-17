@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System.Data.SqlClient;
 
 namespace PJ_IN
 {
-    internal class Conexão
+    public class Conexão
     {
+        public SqlConnection conn = new SqlConnection("Persist Security Info = False; User ID = aline; Initial Catalog = db_aline; Data Source = dbaulabanco.ce9eq7mml3ie.sa - east - 1.rds.amazonaws.com");
+
+        public void conectar()
+        {
+            conn.Open();
+        }
+
+        public void desconetar()
+        {
+            conn.Close();
+        }
     }
 }
