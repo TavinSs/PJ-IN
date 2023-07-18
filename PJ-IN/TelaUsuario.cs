@@ -26,5 +26,10 @@ namespace PJ_IN
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
