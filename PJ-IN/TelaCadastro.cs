@@ -109,5 +109,12 @@ namespace PJ_IN
                 MessageBox.Show("Não foi possível acessar o site no momento! \nTente novamente: " + ex.Message);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Tela1 tela1 = new Tela1();
+            tela1.Show();
+            this.Hide();
+        }
     }
 }

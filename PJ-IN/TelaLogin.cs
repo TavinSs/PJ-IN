@@ -24,9 +24,29 @@ namespace PJ_IN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TelaInicio telaInicio = new TelaInicio();
-            telaInicio.Show();
-            this.Hide();
+            Conexao db = new Conexao();
+            db.Conectar();
+
+            UsuarioBanco usuario = new UsuarioBanco();
+            usuario.Usuario = textBox1.Text;
+            usuario.Senha = textBox2.Text;
+
+
+
+            var retorno = db.BuscarUsuario(usuario.Usuario, usuario.Senha);
+
+            if (!retorno)
+            {
+                MessageBox.Show("Senha incorreta!  \nTente Novamente");
+            }
+            if (retorno)
+            {
+                MessageBox.Show("Bem-Vindo");
+
+                TelaInicio inicio = new TelaInicio();
+                inicio.Show();
+                this.Hide();
+            }
 
         }
 

@@ -64,9 +64,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
-            pictureBox4.Location = new Point(197, 604);
+            pictureBox4.Location = new Point(186, 604);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 52);
+            pictureBox4.Size = new Size(69, 59);
             pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox4.TabIndex = 18;
             pictureBox4.TabStop = false;

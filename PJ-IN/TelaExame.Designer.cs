@@ -31,25 +31,28 @@
             panel2 = new Panel();
             pictureBox3 = new PictureBox();
             button4 = new Button();
-            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            button3 = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // panel2
             // 
             panel2.BackColor = Color.Gainsboro;
+            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(button3);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Dock = DockStyle.Left;
@@ -81,19 +84,6 @@
             button4.TabIndex = 3;
             button4.Text = "Faturas";
             button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(107, 72, 142);
-            button3.Location = new Point(0, 594);
-            button3.Name = "button3";
-            button3.Size = new Size(269, 59);
-            button3.TabIndex = 2;
-            button3.Text = "Sair";
-            button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -152,6 +142,29 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
+            pictureBox4.Location = new Point(186, 604);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(69, 59);
+            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox4.TabIndex = 20;
+            pictureBox4.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.FromArgb(107, 72, 142);
+            button3.Location = new Point(0, 604);
+            button3.Name = "button3";
+            button3.Size = new Size(180, 59);
+            button3.TabIndex = 19;
+            button3.Text = "Sair";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // TelaExame
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -168,6 +181,7 @@
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -176,11 +190,12 @@
         private Panel panel2;
         private PictureBox pictureBox3;
         private Button button4;
-        private Button button3;
         private Button button2;
         private Button button1;
         private Panel panel1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox4;
+        private Button button3;
     }
 }

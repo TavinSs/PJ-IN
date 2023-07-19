@@ -46,6 +46,7 @@
             label12 = new Label();
             label3 = new Label();
             label7 = new Label();
+            button4 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -260,12 +261,27 @@
             label7.TabIndex = 3;
             label7.Text = "Assine um do nossos planos";
             // 
+            // button4
+            // 
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.FromArgb(107, 72, 142);
+            button4.Location = new Point(811, 492);
+            button4.Name = "button4";
+            button4.Size = new Size(269, 59);
+            button4.TabIndex = 20;
+            button4.Text = "Voltar";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // TelaCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1092, 554);
+            ClientSize = new Size(1092, 563);
+            Controls.Add(button4);
             Controls.Add(label7);
             Controls.Add(panel4);
             Controls.Add(panel3);
@@ -307,5 +323,6 @@
         private Label label11;
         private Label label12;
         private Label label6;
+        private Button button4;
     }
 }
