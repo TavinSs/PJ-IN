@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace PJ_IN
 {
-    public partial class RedfinirSenha : Form
+    public partial class RedefinirSenha : Form
     {
         Point mousePos;
 
-        public RedfinirSenha()
+        public RedefinirSenha()
         {
             InitializeComponent();
         }
@@ -53,6 +53,18 @@ namespace PJ_IN
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Hide();
         }
     }
 }

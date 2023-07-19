@@ -8,5 +8,8 @@ namespace PJ_IN
 {
     internal class UsuarioBanco
     {
+        public string Usuario { get; set; }
+        public string Senha { get; set; }
+        public string EhAdm { get; set; }
     }
 }

@@ -112,7 +112,7 @@ namespace PJ_IN
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Tela1 tela1 = new Tela1();
+            Form1 tela1 = new Form1();
             tela1.Show();
             this.Hide();
         }

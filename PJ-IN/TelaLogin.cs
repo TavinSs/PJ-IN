@@ -91,8 +91,8 @@ namespace PJ_IN
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RedefinirSenha redefinir = new RedefinirSenha();
-            redefinir.Show();
+             RedefinirSenha redefinirSenha = new RedefinirSenha();
+            redefinirSenha.Show();
             this.Hide();
         }
     }
