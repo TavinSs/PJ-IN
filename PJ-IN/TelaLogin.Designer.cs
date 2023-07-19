@@ -36,6 +36,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -143,11 +144,25 @@
             label2.TabIndex = 18;
             label2.Text = "Senha";
             // 
+            // linkLabel1
+            // 
+            linkLabel1.ActiveLinkColor = Color.FromArgb(107, 72, 162);
+            linkLabel1.AutoSize = true;
+            linkLabel1.LinkColor = Color.FromArgb(107, 72, 142);
+            linkLabel1.Location = new Point(471, 302);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(89, 15);
+            linkLabel1.TabIndex = 20;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Redefinir Senha";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // TelaLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(817, 493);
+            Controls.Add(linkLabel1);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);
@@ -176,5 +191,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
+        private LinkLabel linkLabel1;
     }
 }
