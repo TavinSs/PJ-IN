@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PJ_IN
 {
-    internal class SocioDependente
+    internal class Dependente
     {
+
     }
 }
