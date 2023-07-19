@@ -8,5 +8,6 @@ namespace PJ_IN
 {
     internal class Socio
     {
+
     }
 }
