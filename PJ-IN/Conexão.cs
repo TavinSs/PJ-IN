@@ -63,5 +63,40 @@ namespace PJ_IN
 
             return EhAdm;
         }
+
+        public List<Socio> DadosUsuario()
+        {
+            string sql = "SELECT * FROM Socio";
+            SqlCommand comando = new SqlCommand(sql, conn);
+            List<Socio> socios = new List<Socio>();
+            using (var reader = comando.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var nomeDb = reader.GetString(reader.GetOrdinal("Nome"));
+                    var dataNascimentoDb = reader.GetString(reader.GetOrdinal("DataNascimento"));
+                    var cpfDb = reader.GetString(reader.GetOrdinal("Cpf"));
+                    var telefoneDb = reader.GetString(reader.GetOrdinal("Telefone"));
+                    var emailDb = reader.GetString(reader.GetOrdinal("Email"));
+                    var numeroDb = reader.GetString(reader.GetOrdinal("Numero"));
+                    var complementoDb = reader.GetString(reader.GetOrdinal("Complemento"));
+                    var referenciaDb = reader.GetString(reader.GetOrdinal("Referencia"));
+
+                    socios.Add(new Socio()
+                    {
+                        Nome = nomeDb,
+                        DataNascimento = dataNascimentoDb,
+                        Cpf = cpfDb,
+                        Telefone = telefoneDb,
+                        Email = emailDb,
+                        Numero = numeroDb,
+                        Complemento = complementoDb,
+                        Referencia = referenciaDb,
+
+                    });
+                }
+                return socios;
+            }
+        }
     }
 }

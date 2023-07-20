@@ -149,6 +149,8 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1300, 49);
             panel1.TabIndex = 15;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
             // 
             // pictureBox1
             // 
@@ -181,6 +183,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaEventos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaEventos";
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

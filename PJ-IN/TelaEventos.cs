@@ -12,6 +12,8 @@ namespace PJ_IN
 {
     public partial class TelaEventos : Form
     {
+        Point mousePos;
+
         public TelaEventos()
         {
             InitializeComponent();
@@ -60,6 +62,25 @@ namespace PJ_IN
             TelaUsuario telaUsuario = new TelaUsuario();
             telaUsuario.Show();
             this.Hide();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mousePos = new Point(e.X, e.Y);
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int deltaX = e.X - mousePos.X;
+                int deltaY = e.Y - mousePos.Y;
+
+                Location = new Point(Location.X + deltaX, Location.Y + deltaY);
+            }
         }
     }
 }

@@ -24,10 +24,6 @@ namespace PJ_IN
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -52,7 +48,7 @@ namespace PJ_IN
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void button4_Click(object sender, EventArgs e)

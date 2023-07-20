@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PJ_IN
 {
-    internal class Dependente
+    public class Dependente
     {
         public string Nome { get; set; }
         public string DataNascimento { get; set; }

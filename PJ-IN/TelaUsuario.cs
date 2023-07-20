@@ -29,6 +29,14 @@ namespace PJ_IN
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void TelaAluno_Load(object sender, EventArgs e)
+        {
+            Conexao db = new Conexao();
+            db.Conectar();
+            var socio = db.DadosUsuario();
+            dataGridView1.DataSource = socio;
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

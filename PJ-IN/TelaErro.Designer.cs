@@ -31,6 +31,7 @@
             label1 = new Label();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
+            button4 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -55,6 +56,8 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(320, 49);
             panel1.TabIndex = 4;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
             // 
             // pictureBox2
             // 
@@ -67,11 +70,25 @@
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
+            // button4
+            // 
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.FromArgb(107, 72, 142);
+            button4.Location = new Point(69, 123);
+            button4.Name = "button4";
+            button4.Size = new Size(170, 48);
+            button4.TabIndex = 6;
+            button4.Text = "OK";
+            button4.UseVisualStyleBackColor = true;
+            // 
             // TelaErro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(320, 150);
+            ClientSize = new Size(320, 183);
+            Controls.Add(button4);
             Controls.Add(label1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -89,5 +106,6 @@
         private Label label1;
         private Panel panel1;
         private PictureBox pictureBox2;
+        private Button button4;
     }
 }

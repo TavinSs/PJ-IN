@@ -231,6 +231,7 @@
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "RedefinirSenha";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RedfinirSenha";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

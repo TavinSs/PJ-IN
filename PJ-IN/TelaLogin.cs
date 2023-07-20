@@ -12,6 +12,7 @@ namespace PJ_IN
 {
     public partial class TelaLogin : Form
     {
+        Point mousePos;
         public TelaLogin()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace PJ_IN
                     TelaBemVindo bemVindo = new TelaBemVindo();
                     bemVindo.ExibirMensagem("Bem-vindo, administrador!");
                     bemVindo.ShowDialog();
-                    
+
                     TelaInicio inicio = new TelaInicio();
                     inicio.Show();
                     this.Hide();
@@ -47,7 +48,7 @@ namespace PJ_IN
                     TelaBemVindo bemVindo = new TelaBemVindo();
                     bemVindo.ExibirMensagem("Bem-vindo!");
                     bemVindo.ShowDialog();
-                    
+
                     TelaInicio inicio = new TelaInicio();
                     inicio.Show();
                     this.Hide();
@@ -106,9 +107,28 @@ namespace PJ_IN
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-             RedefinirSenha redefinirSenha = new RedefinirSenha();
+            RedefinirSenha redefinirSenha = new RedefinirSenha();
             redefinirSenha.Show();
             this.Hide();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mousePos = new Point(e.X, e.Y);
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int deltaX = e.X - mousePos.X;
+                int deltaY = e.Y - mousePos.Y;
+
+                Location = new Point(Location.X + deltaX, Location.Y + deltaY);
+            }
         }
     }
 }
