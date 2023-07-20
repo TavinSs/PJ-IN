@@ -82,5 +82,6 @@ namespace PJ_IN
                 Location = new Point(Location.X + deltaX, Location.Y + deltaY);
             }
         }
+
     }
 }

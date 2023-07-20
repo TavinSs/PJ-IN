@@ -33,8 +33,8 @@ namespace PJ_IN
         {
             Conexao db = new Conexao();
             db.Conectar();
-            var socio = db.DadosUsuario();
-            dataGridView1.DataSource = socio;
+            var socios = db.DadosUsuario();
+            dataGridView1.DataSource = socios;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
