@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            pictureBox4 = new PictureBox();
+            button3 = new Button();
             pictureBox3 = new PictureBox();
             button4 = new Button();
             button2 = new Button();
@@ -36,14 +38,12 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            button3 = new Button();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -60,6 +60,29 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(272, 666);
             panel2.TabIndex = 16;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
+            pictureBox4.Location = new Point(200, 604);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(69, 59);
+            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox4.TabIndex = 20;
+            pictureBox4.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.FromArgb(107, 72, 142);
+            button3.Location = new Point(0, 604);
+            button3.Name = "button3";
+            button3.Size = new Size(194, 59);
+            button3.TabIndex = 19;
+            button3.Text = "Sair";
+            button3.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -142,29 +165,6 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
-            pictureBox4.Location = new Point(186, 604);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(69, 59);
-            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox4.TabIndex = 20;
-            pictureBox4.TabStop = false;
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(107, 72, 142);
-            button3.Location = new Point(0, 604);
-            button3.Name = "button3";
-            button3.Size = new Size(180, 59);
-            button3.TabIndex = 19;
-            button3.Text = "Sair";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // TelaEventos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -176,11 +176,11 @@
             Name = "TelaEventos";
             Text = "TelaEventos";
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 

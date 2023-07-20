@@ -33,15 +33,17 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             pictureBox3 = new PictureBox();
-            button3 = new Button();
+            button4 = new Button();
             button2 = new Button();
             button1 = new Button();
-            button4 = new Button();
+            pictureBox4 = new PictureBox();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox2
@@ -82,9 +84,10 @@
             // panel2
             // 
             panel2.BackColor = Color.Gainsboro;
+            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(button3);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Dock = DockStyle.Left;
@@ -104,18 +107,19 @@
             pictureBox3.TabIndex = 17;
             pictureBox3.TabStop = false;
             // 
-            // button3
+            // button4
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(107, 72, 142);
-            button3.Location = new Point(0, 594);
-            button3.Name = "button3";
-            button3.Size = new Size(213, 59);
-            button3.TabIndex = 2;
-            button3.Text = "Sair";
-            button3.UseVisualStyleBackColor = true;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.FromArgb(107, 72, 142);
+            button4.Location = new Point(12, 341);
+            button4.Name = "button4";
+            button4.Size = new Size(269, 59);
+            button4.TabIndex = 3;
+            button4.Text = "Faturas";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button2
             // 
@@ -145,19 +149,28 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button4
+            // pictureBox4
             // 
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.FromArgb(107, 72, 142);
-            button4.Location = new Point(12, 341);
-            button4.Name = "button4";
-            button4.Size = new Size(269, 59);
-            button4.TabIndex = 3;
-            button4.Text = "Faturas";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
+            pictureBox4.Location = new Point(200, 604);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(69, 59);
+            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox4.TabIndex = 22;
+            pictureBox4.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.FromArgb(107, 72, 142);
+            button3.Location = new Point(0, 604);
+            button3.Name = "button3";
+            button3.Size = new Size(194, 59);
+            button3.TabIndex = 21;
+            button3.Text = "Sair";
+            button3.UseVisualStyleBackColor = true;
             // 
             // TelaInicio
             // 
@@ -175,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -184,10 +198,11 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private Panel panel2;
-        private Button button3;
         private Button button2;
         private Button button1;
         private PictureBox pictureBox3;
         private Button button4;
+        private PictureBox pictureBox4;
+        private Button button3;
     }
 }

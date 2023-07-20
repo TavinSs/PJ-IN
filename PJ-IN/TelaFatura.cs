@@ -48,5 +48,12 @@ namespace PJ_IN
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            TelaUsuario telaUsuario = new TelaUsuario();
+            telaUsuario.Show();
+            this.Hide();
+        }
     }
 }

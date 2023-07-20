@@ -145,11 +145,11 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
-            pictureBox4.Location = new Point(186, 604);
+            pictureBox4.Location = new Point(200, 604);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(69, 59);
             pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox4.TabIndex = 20;
+            pictureBox4.TabIndex = 22;
             pictureBox4.TabStop = false;
             // 
             // button3
@@ -160,8 +160,8 @@
             button3.ForeColor = Color.FromArgb(107, 72, 142);
             button3.Location = new Point(0, 604);
             button3.Name = "button3";
-            button3.Size = new Size(180, 59);
-            button3.TabIndex = 19;
+            button3.Size = new Size(194, 59);
+            button3.TabIndex = 21;
             button3.Text = "Sair";
             button3.UseVisualStyleBackColor = true;
             // 
