@@ -16,5 +16,15 @@ namespace PJ_IN
         {
             InitializeComponent();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void ExibirMensagem(string mensagem)
+        {
+            label1.Text = mensagem;
+        }
     }
 }

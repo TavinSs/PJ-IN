@@ -66,5 +66,62 @@ namespace PJ_IN
             login.Show();
             this.Hide();
         }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Usuário")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.FromArgb(107, 72, 142);
+
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Usuário";
+                textBox1.ForeColor = Color.FromArgb(107, 72, 142);
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Nova Senha")
+            {
+                textBox2.Text = "";
+                textBox2.ForeColor = Color.FromArgb(107, 72, 142);
+
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "Nova Senha";
+                textBox2.ForeColor = Color.FromArgb(107, 72, 142);
+            }
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Repetir Senha")
+            {
+                textBox3.Text = "";
+                textBox3.ForeColor = Color.FromArgb(107, 72, 142);
+
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "")
+            {
+                textBox3.Text = "Repetir Senha";
+                textBox3.ForeColor = Color.FromArgb(107, 72, 142);
+            }
+        }
     }
 }

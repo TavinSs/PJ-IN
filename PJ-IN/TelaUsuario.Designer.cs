@@ -33,18 +33,17 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
-            pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
+            button5 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -59,6 +58,8 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1300, 49);
             panel1.TabIndex = 14;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
             // 
             // pictureBox1
             // 
@@ -85,7 +86,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Gainsboro;
-            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(button5);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
@@ -96,16 +97,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(272, 666);
             panel2.TabIndex = 17;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
-            pictureBox4.Location = new Point(197, 604);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(57, 52);
-            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox4.TabIndex = 18;
-            pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -130,6 +121,7 @@
             button4.TabIndex = 3;
             button4.Text = "Exames";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -139,10 +131,11 @@
             button3.ForeColor = Color.FromArgb(107, 72, 142);
             button3.Location = new Point(0, 604);
             button3.Name = "button3";
-            button3.Size = new Size(180, 59);
+            button3.Size = new Size(269, 59);
             button3.TabIndex = 2;
             button3.Text = "Sair";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -156,6 +149,7 @@
             button2.TabIndex = 1;
             button2.Text = "Eventos";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -169,6 +163,7 @@
             button1.TabIndex = 0;
             button1.Text = "Inicio";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
@@ -192,6 +187,20 @@
             dataGridView1.TabIndex = 18;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // button5
+            // 
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.FromArgb(107, 72, 142);
+            button5.Location = new Point(0, 406);
+            button5.Name = "button5";
+            button5.Size = new Size(269, 59);
+            button5.TabIndex = 18;
+            button5.Text = "Faturas";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // TelaUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -208,7 +217,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -220,12 +228,12 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panel2;
-        private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
         private DataGridView dataGridView1;
+        private Button button5;
     }
 }

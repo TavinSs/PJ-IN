@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            pictureBox4 = new PictureBox();
+            button3 = new Button();
             pictureBox3 = new PictureBox();
             button4 = new Button();
             button2 = new Button();
@@ -36,14 +38,12 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            button3 = new Button();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -60,6 +60,31 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(272, 666);
             panel2.TabIndex = 16;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
+            pictureBox4.Location = new Point(200, 604);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(69, 59);
+            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox4.TabIndex = 22;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.FromArgb(107, 72, 142);
+            button3.Location = new Point(0, 604);
+            button3.Name = "button3";
+            button3.Size = new Size(194, 59);
+            button3.TabIndex = 21;
+            button3.Text = "Sair";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // pictureBox3
             // 
@@ -84,6 +109,7 @@
             button4.TabIndex = 3;
             button4.Text = "Faturas";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button2
             // 
@@ -97,6 +123,7 @@
             button2.TabIndex = 1;
             button2.Text = "Eventos";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -110,6 +137,7 @@
             button1.TabIndex = 0;
             button1.Text = "Inicio";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
@@ -121,6 +149,8 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1300, 49);
             panel1.TabIndex = 15;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
             // 
             // pictureBox1
             // 
@@ -131,6 +161,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox2
             // 
@@ -141,29 +172,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.icons8_usuário_homem_com_círculo_48;
-            pictureBox4.Location = new Point(200, 604);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(69, 59);
-            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox4.TabIndex = 22;
-            pictureBox4.TabStop = false;
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(107, 72, 142);
-            button3.Location = new Point(0, 604);
-            button3.Name = "button3";
-            button3.Size = new Size(194, 59);
-            button3.TabIndex = 21;
-            button3.Text = "Sair";
-            button3.UseVisualStyleBackColor = true;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // TelaExame
             // 
@@ -177,11 +186,11 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaExame";
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 

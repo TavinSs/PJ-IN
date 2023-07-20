@@ -55,5 +55,33 @@ namespace PJ_IN
             telaUsuario.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaInicio inicio = new TelaInicio();
+            inicio.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaEventos eventos = new TelaEventos();
+            eventos.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TelaExame exame = new TelaExame();
+            exame.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TelaUsuario telaUsuario = new TelaUsuario();
+            telaUsuario.Show();
+            this.Hide();
+        }
     }
 }

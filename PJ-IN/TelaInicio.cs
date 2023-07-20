@@ -70,5 +70,19 @@ namespace PJ_IN
             fatura.Show();
             this.Hide();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            TelaUsuario telaUsuario = new TelaUsuario();
+            telaUsuario.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TelaLogin telaLogin = new TelaLogin();
+            telaLogin.Show();
+            this.Hide();
+        }
     }
 }

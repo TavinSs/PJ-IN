@@ -24,31 +24,46 @@ namespace PJ_IN
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+
             Conexao db = new Conexao();
             db.Conectar();
 
-            UsuarioBanco usuario = new UsuarioBanco();
-            usuario.Usuario = textBox1.Text;
-            usuario.Senha = textBox2.Text;
-
-
-
-            var retorno = db.BuscarUsuario(usuario.Usuario, usuario.Senha);
-
-            if (!retorno)
+            if (db.BuscarUsuario(username, password))
             {
-                MessageBox.Show("Senha incorreta!  \nTente Novamente");
-            }
-            if (retorno)
-            {
-                MessageBox.Show("Bem-Vindo");
+                if (db.EhAdm(username))
+                {
+                    TelaBemVindo bemVindo = new TelaBemVindo();
+                    bemVindo.ExibirMensagem("Bem-vindo, administrador!");
+                    bemVindo.ShowDialog();
+                    
+                    TelaInicio inicio = new TelaInicio();
+                    inicio.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    TelaBemVindo bemVindo = new TelaBemVindo();
+                    bemVindo.ExibirMensagem("Bem-vindo!");
+                    bemVindo.ShowDialog();
+                    
+                    TelaInicio inicio = new TelaInicio();
+                    inicio.Show();
+                    this.Hide();
+                }
 
-                TelaInicio inicio = new TelaInicio();
-                inicio.Show();
                 this.Hide();
             }
+            else
+            {
+                TelaErro erro = new TelaErro();
+                erro.Show();
+            }
 
+            db.Desconectar();
         }
+
 
         private void textBox1_Enter(object sender, EventArgs e)
         {

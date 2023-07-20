@@ -10,6 +10,6 @@ namespace PJ_IN
     {
         public string Usuario { get; set; }
         public string Senha { get; set; }
-        public string EhAdm { get; set; }
+        public bool EhAdm { get; set; }
     }
 }

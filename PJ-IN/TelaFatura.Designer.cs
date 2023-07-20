@@ -93,6 +93,7 @@
             button1.TabIndex = 0;
             button1.Text = "Inicio";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -106,6 +107,7 @@
             button2.TabIndex = 1;
             button2.Text = "Eventos";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button4
             // 
@@ -119,6 +121,7 @@
             button4.TabIndex = 3;
             button4.Text = "Exames";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // pictureBox3
             // 
@@ -168,6 +171,7 @@
             button3.TabIndex = 21;
             button3.Text = "Sair";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // TelaFatura
             // 
@@ -178,6 +182,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaFatura";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaFatura";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -91,6 +91,8 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(817, 49);
             panel1.TabIndex = 12;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
             // 
             // pictureBox2
             // 
