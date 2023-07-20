@@ -146,6 +146,8 @@
             textBox2.Size = new Size(278, 26);
             textBox2.TabIndex = 23;
             textBox2.Text = "Nova Senha";
+            textBox2.Enter += textBox2_Enter;
+            textBox2.Leave += textBox2_Leave;
             // 
             // label2
             // 
@@ -170,6 +172,8 @@
             textBox1.Size = new Size(278, 26);
             textBox1.TabIndex = 21;
             textBox1.Text = "Usuário";
+            textBox1.Enter += textBox1_Enter;
+            textBox1.Leave += textBox1_Leave;
             // 
             // label1
             // 
@@ -193,7 +197,9 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(278, 26);
             textBox3.TabIndex = 25;
-            textBox3.Text = "Repetir  Senha";
+            textBox3.Text = "Repetir Senha";
+            textBox3.Enter += textBox3_Enter;
+            textBox3.Leave += textBox3_Leave;
             // 
             // label3
             // 
@@ -206,7 +212,7 @@
             label3.TabIndex = 24;
             label3.Text = "Repetir Senha";
             // 
-            // RedfinirSenha
+            // RedefinirSenha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -224,7 +230,8 @@
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "RedfinirSenha";
+            Name = "RedefinirSenha";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RedfinirSenha";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

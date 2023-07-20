@@ -12,6 +12,7 @@ namespace PJ_IN
 {
     public partial class TelaLogin : Form
     {
+        Point mousePos;
         public TelaLogin()
         {
             InitializeComponent();
@@ -24,31 +25,46 @@ namespace PJ_IN
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+
             Conexao db = new Conexao();
             db.Conectar();
 
-            UsuarioBanco usuario = new UsuarioBanco();
-            usuario.Usuario = textBox1.Text;
-            usuario.Senha = textBox2.Text;
-
-
-
-            var retorno = db.BuscarUsuario(usuario.Usuario, usuario.Senha);
-
-            if (!retorno)
+            if (db.BuscarUsuario(username, password))
             {
-                MessageBox.Show("Senha incorreta!  \nTente Novamente");
-            }
-            if (retorno)
-            {
-                MessageBox.Show("Bem-Vindo");
+                if (db.EhAdm(username))
+                {
+                    TelaBemVindo bemVindo = new TelaBemVindo();
+                    bemVindo.ExibirMensagem("Bem-vindo, administrador!");
+                    bemVindo.ShowDialog();
 
-                TelaInicio inicio = new TelaInicio();
-                inicio.Show();
+                    TelaInicio inicio = new TelaInicio();
+                    inicio.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    TelaBemVindo bemVindo = new TelaBemVindo();
+                    bemVindo.ExibirMensagem("Bem-vindo!");
+                    bemVindo.ShowDialog();
+
+                    TelaInicio inicio = new TelaInicio();
+                    inicio.Show();
+                    this.Hide();
+                }
+
                 this.Hide();
             }
+            else
+            {
+                TelaErro erro = new TelaErro();
+                erro.Show();
+            }
 
+            db.Desconectar();
         }
+
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
@@ -91,9 +107,28 @@ namespace PJ_IN
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-             RedefinirSenha redefinirSenha = new RedefinirSenha();
+            RedefinirSenha redefinirSenha = new RedefinirSenha();
             redefinirSenha.Show();
             this.Hide();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mousePos = new Point(e.X, e.Y);
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int deltaX = e.X - mousePos.X;
+                int deltaY = e.Y - mousePos.Y;
+
+                Location = new Point(Location.X + deltaX, Location.Y + deltaY);
+            }
         }
     }
 }

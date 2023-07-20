@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PJ_IN
 {
-    internal class Socio
+    public class Socio
     {
         public string Nome { get; set; }
         public string DataNascimento { get; set; }
-        private string Cpf { get; set; }
+        public string Cpf { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string Numero { get; set; }
