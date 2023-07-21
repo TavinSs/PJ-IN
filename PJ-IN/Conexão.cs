@@ -86,7 +86,7 @@ namespace PJ_IN
                     socios.Add(new Socio()
                     {
                         Nome = nomeDb,
-                        DataNascimento = dataNascimentoDb.ToString(), 
+                        DataNascimento = dataNascimentoDb,
                         Cpf = cpfDb,
                         Telefone = telefoneDb,
                         Email = emailDb,                        
