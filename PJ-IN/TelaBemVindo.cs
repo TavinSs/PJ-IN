@@ -52,5 +52,10 @@ namespace PJ_IN
                 Location = new Point(Location.X + deltaX, Location.Y + deltaY);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
