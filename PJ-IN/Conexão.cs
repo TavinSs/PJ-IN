@@ -66,7 +66,7 @@ namespace PJ_IN
 
         public List<Socio> DadosUsuario()
         {
-            string sql = "SELECT * FROM Socio s LEFT JOIN Dependente d ON s.codigo = d.codigoSocio WHERE s.Nome LIKE '%.adm%';";
+            string sql = "SELECT * FROM Socio s LEFT JOIN Dependente d ON s.Codigo = d.CodigoSocio JOIN SocioLogado sl ON s.Codigo = sl.CodigoSocio WHERE s.Codigo = CodigoLoginUsuario;";
             SqlCommand comando = new SqlCommand(sql, conn);
 
 
