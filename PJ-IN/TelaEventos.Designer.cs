@@ -73,6 +73,10 @@
             linkLabel3 = new LinkLabel();
             linkLabel4 = new LinkLabel();
             vScrollBar1 = new VScrollBar();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -231,7 +235,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.R;
-            pictureBox5.Location = new Point(310, 134);
+            pictureBox5.Location = new Point(305, 134);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(160, 177);
@@ -242,14 +246,13 @@
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources._3;
-            pictureBox6.Location = new Point(812, 134);
+            pictureBox6.Location = new Point(810, 134);
             pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(160, 177);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 19;
             pictureBox6.TabStop = false;
-
             // 
             // pictureBox7
             // 
@@ -265,7 +268,7 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(559, 134);
+            pictureBox8.Location = new Point(558, 134);
             pictureBox8.Margin = new Padding(3, 2, 3, 2);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(160, 177);
@@ -360,7 +363,6 @@
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 32;
             pictureBox10.TabStop = false;
-
             // 
             // label5
             // 
@@ -379,7 +381,6 @@
             label6.Size = new Size(113, 15);
             label6.TabIndex = 34;
             label6.Text = "05/08/2023  11:00:00";
-
             // 
             // label7
             // 
@@ -425,7 +426,6 @@
             label11.Size = new Size(110, 15);
             label11.TabIndex = 39;
             label11.Text = "Quadra de voleibol ";
-
             // 
             // label12
             // 
@@ -435,7 +435,6 @@
             label12.Size = new Size(86, 15);
             label12.TabIndex = 40;
             label12.Text = "Piscina Externa";
-
             // 
             // label14
             // 
@@ -562,13 +561,72 @@
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(25, 576);
             vScrollBar1.TabIndex = 56;
-
+            // 
+            // button5
+            // 
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.FromArgb(107, 72, 142);
+            button5.Location = new Point(326, 466);
+            button5.Name = "button5";
+            button5.Size = new Size(139, 47);
+            button5.TabIndex = 57;
+            button5.Text = "Confirmar Presença";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.ForeColor = Color.FromArgb(107, 72, 142);
+            button6.Location = new Point(579, 466);
+            button6.Name = "button6";
+            button6.Size = new Size(139, 47);
+            button6.TabIndex = 58;
+            button6.Text = "Confirmar Presença";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.ForeColor = Color.FromArgb(107, 72, 142);
+            button7.Location = new Point(831, 466);
+            button7.Name = "button7";
+            button7.Size = new Size(139, 47);
+            button7.TabIndex = 59;
+            button7.Text = "Confirmar Presença";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button8.ForeColor = Color.FromArgb(107, 72, 142);
+            button8.Location = new Point(1089, 466);
+            button8.Name = "button8";
+            button8.Size = new Size(139, 47);
+            button8.TabIndex = 60;
+            button8.Text = "Confirmar Presença";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // TelaEventos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1300, 715);
+            Controls.Add(button8);
+            Controls.Add(button7);
+            Controls.Add(button6);
+            Controls.Add(button5);
             Controls.Add(vScrollBar1);
             Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
@@ -608,7 +666,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaEventos";
             Text = "TelaEventos";
-
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -675,5 +732,9 @@
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel4;
         private VScrollBar vScrollBar1;
+        private Button button5;
+        private Button button6;
+        private Button button7;
+        private Button button8;
     }
 }

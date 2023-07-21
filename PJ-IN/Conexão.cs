@@ -64,10 +64,12 @@ namespace PJ_IN
             return EhAdm;
         }
 
-        public List<Socio> DadosUsuario()
+        public List<Socio> DadosUsuario(int codigo)
         {
-            string sql = "SELECT * FROM Socio";
+            string sql = "SELECT * FROM Socio WHERE codigo = @Codigo";
             SqlCommand comando = new SqlCommand(sql, conn);
+            comando.Parameters.AddWithValue("@Codigo", codigo);
+
             List<Socio> socios = new List<Socio>();
 
             using (var reader = comando.ExecuteReader())
@@ -89,16 +91,16 @@ namespace PJ_IN
                         DataNascimento = dataNascimentoDb,
                         Cpf = cpfDb,
                         Telefone = telefoneDb,
-                        Email = emailDb,                        
+                        Email = emailDb,
                         Numero = numeroDb,
                         Complemento = complementoDb,
                         Referencia = referenciaDb
-
                     });
                 }
             }
             return socios;
         }
+
         public List<Fatura> DadosFatura()
         {
             string sql = "SELECT * FROM Fatura";

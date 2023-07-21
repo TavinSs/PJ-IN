@@ -84,7 +84,7 @@ namespace PJ_IN
             }
         }
 
-       
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -144,6 +144,34 @@ namespace PJ_IN
             {
                 MessageBox.Show("Não foi possível acessar o site no momento! \nTente novamente: " + ex.Message);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TelaBemVindo bemVindo = new TelaBemVindo();
+            bemVindo.ExMensagem("Confirmado");
+            bemVindo.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TelaBemVindo bemVindo = new TelaBemVindo();
+            bemVindo.ExMensagem("Confirmado");
+            bemVindo.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            TelaBemVindo bemVindo = new TelaBemVindo();
+            bemVindo.ExMensagem("Confirmado");
+            bemVindo.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TelaBemVindo bemVindo = new TelaBemVindo();
+            bemVindo.ExMensagem("Confirmado");
+            bemVindo.ShowDialog();
         }
     }
 }
