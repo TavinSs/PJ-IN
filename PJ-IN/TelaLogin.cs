@@ -46,7 +46,7 @@ namespace PJ_IN
                 else
                 {
                     TelaBemVindo bemVindo = new TelaBemVindo();
-                    bemVindo.ExibirMensagem("Bem-vindo!");
+                    bemVindo.ExMensagem("Bem-vindo!");
                     bemVindo.ShowDialog();
 
                     TelaInicio inicio = new TelaInicio();

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PJ_IN
 {
-    
+
     public partial class TelaBemVindo : Form
     {
         Point mousePos;
@@ -27,6 +27,11 @@ namespace PJ_IN
         public void ExibirMensagem(string mensagem)
         {
             label1.Text = mensagem;
+        }
+
+        public void ExMensagem(string mensagem)
+        {
+            label2.Text = mensagem;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -46,6 +51,11 @@ namespace PJ_IN
 
                 Location = new Point(Location.X + deltaX, Location.Y + deltaY);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

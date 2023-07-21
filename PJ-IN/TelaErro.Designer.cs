@@ -76,12 +76,13 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.FromArgb(107, 72, 142);
-            button4.Location = new Point(69, 123);
+            button4.Location = new Point(68, 133);
             button4.Name = "button4";
-            button4.Size = new Size(170, 48);
+            button4.Size = new Size(170, 38);
             button4.TabIndex = 6;
             button4.Text = "OK";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // TelaErro
             // 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -53,6 +54,55 @@ namespace PJ_IN
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Conexao db = new Conexao();
+            db.Conectar();
+
+            string usuario = textBox1.Text;
+
+            var usuarioExiste = db.BuscaUser(usuario);
+            db.Desconectar();
+
+            if (!usuarioExiste)
+            {
+                MessageBox.Show("Usuário não encontrado.");
+            }
+            else
+            {
+                string novaSenha = textBox2.Text;
+                string confirmarSenha = textBox3.Text;
+
+                if (string.IsNullOrEmpty(novaSenha) || string.IsNullOrEmpty(confirmarSenha))
+                {
+                    MessageBox.Show("Digite a nova senha e confirme-a.");
+                }
+                else if (novaSenha != confirmarSenha)
+                {
+                    MessageBox.Show("A nova senha e a confirmação não coincidem.");
+                }
+                else if (novaSenha.Length < 3) 
+                {
+                    TelaBemVindo bemVindo = new TelaBemVindo();                  
+                    bemVindo.ExibirMensagem("A nova senha deve ter \npelo menos 3 caracteres.");
+                    bemVindo.ShowDialog();
+                }
+                else
+                {
+                    db.Conectar();
+                    string sqlUsuario = $"UPDATE LoginUsuario SET Senha = @Senha WHERE Usuario = @Usuario";
+                    SqlCommand comandoUsuario = new SqlCommand(sqlUsuario, db.conn);
+
+                    // Use parâmetros para evitar ataques de injeção de SQL.
+                    comandoUsuario.Parameters.AddWithValue("@Senha", novaSenha);
+                    comandoUsuario.Parameters.AddWithValue("@Usuario", usuario);
+                    comandoUsuario.ExecuteNonQuery();
+
+                    MessageBox.Show("Senha Redefinida.");
+
+                    TelaLogin telaLogin = new TelaLogin();
+                    telaLogin.Show();
+                    this.Hide();
+                }
+            }
 
         }
 
