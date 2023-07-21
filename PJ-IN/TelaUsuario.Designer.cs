@@ -33,13 +33,13 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
+            button5 = new Button();
             pictureBox3 = new PictureBox();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            button5 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -98,6 +98,20 @@
             panel2.Size = new Size(272, 666);
             panel2.TabIndex = 17;
             // 
+            // button5
+            // 
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.FromArgb(107, 72, 142);
+            button5.Location = new Point(0, 406);
+            button5.Name = "button5";
+            button5.Size = new Size(269, 59);
+            button5.TabIndex = 18;
+            button5.Text = "Faturas";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Gainsboro;
@@ -113,7 +127,7 @@
             // 
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.FromArgb(107, 72, 142);
             button4.Location = new Point(3, 341);
             button4.Name = "button4";
@@ -127,7 +141,7 @@
             // 
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.FromArgb(107, 72, 142);
             button3.Location = new Point(0, 604);
             button3.Name = "button3";
@@ -141,7 +155,7 @@
             // 
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.FromArgb(107, 72, 142);
             button2.Location = new Point(0, 276);
             button2.Name = "button2";
@@ -155,7 +169,7 @@
             // 
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.FromArgb(107, 72, 142);
             button1.Location = new Point(0, 211);
             button1.Name = "button1";
@@ -171,7 +185,7 @@
             dataGridView1.BackgroundColor = Color.Gainsboro;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(107, 72, 122);
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.Gainsboro;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(107, 72, 142);
             dataGridViewCellStyle1.SelectionForeColor = Color.Silver;
@@ -187,20 +201,6 @@
             dataGridView1.TabIndex = 18;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // button5
-            // 
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.FromArgb(107, 72, 142);
-            button5.Location = new Point(0, 406);
-            button5.Name = "button5";
-            button5.Size = new Size(269, 59);
-            button5.TabIndex = 18;
-            button5.Text = "Faturas";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
             // TelaUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -213,6 +213,7 @@
             Name = "TelaUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaUsuario";
+            Load += TelaUsuario_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -235,5 +236,6 @@
         private Button button1;
         private DataGridView dataGridView1;
         private Button button5;
+        private DataGridViewTextBoxColumn Nome;
     }
 }
