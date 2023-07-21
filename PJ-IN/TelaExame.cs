@@ -81,5 +81,13 @@ namespace PJ_IN
             telaUsuario.Show();
             this.Hide();
         }
+
+        private void TelaExame_load(object sender, EventArgs e)
+        {
+            Conexao db = new Conexao();
+            db.Conectar();
+            var exames = db.DadosExames();
+            dataGridView1.DataSource = exames;
+        }
     }
 }

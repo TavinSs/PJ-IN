@@ -64,11 +64,11 @@ namespace PJ_IN
             return EhAdm;
         }
 
-        public List<Socio> DadosUsuario(int codigo)
+        public List<Socio> DadosUsuario()
         {
-            string sql = "SELECT * FROM Socio WHERE codigo = @Codigo";
+            string sql = "SELECT * FROM Socio s LEFT JOIN Dependente d ON s.codigo = d.codigoSocio WHERE s.Nome LIKE '%.adm%';";
             SqlCommand comando = new SqlCommand(sql, conn);
-            comando.Parameters.AddWithValue("@Codigo", codigo);
+
 
             List<Socio> socios = new List<Socio>();
 
@@ -103,7 +103,7 @@ namespace PJ_IN
 
         public List<Fatura> DadosFatura()
         {
-            string sql = "SELECT * FROM Fatura";
+            string sql = "SELECT s.nome, f.DataVencimento, f.ValorTotal, f.Banco, f.Pago FROM Socio s LEFT JOIN Fatura f ON  s.codigo = f.codigoSocio ORDER BY s.Nome";
             SqlCommand comando = new SqlCommand(sql, conn);
             List<Fatura> faturas = new List<Fatura>();
 
@@ -111,7 +111,6 @@ namespace PJ_IN
             {
                 while (reader.Read())
                 {
-
                     var dataVencimentoDb = reader.GetDateTime(reader.GetOrdinal("DataVencimento"));
                     var valorTotalDb = reader.GetDecimal(reader.GetOrdinal("ValorTotal"));
                     var bancoDb = reader.GetString(reader.GetOrdinal("Banco"));
@@ -140,6 +139,29 @@ namespace PJ_IN
                 return true;
 
             return false;
+        }
+
+       public List<Exame>  DadosExames()
+        {
+            string sql = $"select * from Exame";
+            SqlCommand comando = new SqlCommand( sql, conn);
+            List<Exame> exames = new List<Exame>();
+
+            using (var reader = comando.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var dataExameDb = reader.GetDateTime(reader.GetOrdinal("DataExame"));
+                    var nomeDb = reader.GetString(reader.GetOrdinal("Nome"));
+
+                    exames.Add(new Exame()
+                    {
+                          DataExame = dataExameDb,
+                          Nome = nomeDb
+                    });
+                }
+            }
+            return exames;
         }
     }
 }
