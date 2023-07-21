@@ -89,10 +89,11 @@ namespace PJ_IN
                         DataNascimento = dataNascimentoDb.ToString(), 
                         Cpf = cpfDb,
                         Telefone = telefoneDb,
-                        Email = emailDb,
+                        Email = emailDb,                        
                         Numero = numeroDb,
                         Complemento = complementoDb,
-                        Referencia = referenciaDb,
+                        Referencia = referenciaDb
+
                     });
                 }
             }

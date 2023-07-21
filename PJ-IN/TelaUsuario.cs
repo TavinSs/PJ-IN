@@ -29,17 +29,16 @@ namespace PJ_IN
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void TelaAluno_Load(object sender, EventArgs e)
-        {
-            Conexao db = new Conexao();
-            db.Conectar();
-            var socio = db.DadosUsuario();
-            dataGridView1.DataSource = socio;
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void TelaUsuario_Load(object sender, EventArgs e)
+        {
+            Conexao db = new Conexao();
+            db.Conectar();
+            var socios = db.DadosUsuario();
+            dataGridView1.DataSource = socios;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -94,6 +93,11 @@ namespace PJ_IN
             TelaFatura telaFatura = new TelaFatura();
             telaFatura.Show();
             this.Hide();
+        }
+
+        private void TelaUsuario_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
