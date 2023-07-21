@@ -38,12 +38,14 @@
             panel2 = new Panel();
             pictureBox4 = new PictureBox();
             button3 = new Button();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -85,7 +87,7 @@
             // 
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.FromArgb(107, 72, 142);
             button1.Location = new Point(0, 211);
             button1.Name = "button1";
@@ -99,7 +101,7 @@
             // 
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.FromArgb(107, 72, 142);
             button2.Location = new Point(0, 276);
             button2.Name = "button2";
@@ -113,7 +115,7 @@
             // 
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.FromArgb(107, 72, 142);
             button4.Location = new Point(3, 341);
             button4.Name = "button4";
@@ -163,7 +165,7 @@
             // 
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.FromArgb(107, 72, 142);
             button3.Location = new Point(0, 604);
             button3.Name = "button3";
@@ -173,23 +175,38 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.Gainsboro;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(395, 174);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(717, 366);
+            dataGridView1.TabIndex = 17;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            // 
             // TelaFatura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1300, 715);
+            Controls.Add(dataGridView1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaFatura";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaFatura";
+            Load += TelaFatura_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -204,5 +221,6 @@
         private Panel panel2;
         private PictureBox pictureBox4;
         private Button button3;
+        private DataGridView dataGridView1;
     }
 }

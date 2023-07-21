@@ -99,7 +99,34 @@ namespace PJ_IN
             }
             return socios;
         }
+        public List<Fatura> DadosFatura()
+        {
+            string sql = "SELECT * FROM Fatura";
+            SqlCommand comando = new SqlCommand(sql, conn);
+            List<Fatura> faturas = new List<Fatura>();
 
+            using (var reader = comando.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+
+                    var dataVencimentoDb = reader.GetDateTime(reader.GetOrdinal("DataVencimento"));
+                    var valorTotalDb = reader.GetDecimal(reader.GetOrdinal("ValorTotal"));
+                    var bancoDb = reader.GetString(reader.GetOrdinal("Banco"));
+                    var pagoDb = reader.GetBoolean(reader.GetOrdinal("Pago"));
+
+                    faturas.Add(new Fatura()
+                    {
+
+                        DataVencimento = dataVencimentoDb,
+                        ValorTotal = valorTotalDb,
+                        Banco = bancoDb,
+                        Pago = pagoDb
+                    });
+                }
+            }
+            return faturas;
+        }
         public bool BuscaUser(string usuario)
         {
             string sql = $"select * from LoginUsuario where Usuario = '{usuario}'";

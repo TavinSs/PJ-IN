@@ -79,9 +79,26 @@ namespace PJ_IN
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TelaUsuario telaUsuario = new TelaUsuario();
-            telaUsuario.Show();
+            TelaLogin telaLogin = new TelaLogin();
+            telaLogin.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void TelaFatura_Load(object sender, EventArgs e)
+        {
+            Conexao db = new Conexao();
+            db.Conectar();
+            var faturas = db.DadosFatura();
+            dataGridView1.DataSource = faturas;
         }
     }
 }
