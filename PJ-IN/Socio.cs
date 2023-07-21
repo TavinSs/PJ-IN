@@ -8,7 +8,6 @@ namespace PJ_IN
 {
     public class Socio
     {
-        public string Codigo { get; set; }
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Cpf { get; set; }

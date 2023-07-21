@@ -39,6 +39,10 @@ namespace PJ_IN
             db.Conectar();
             var socios = db.DadosUsuario();
             dataGridView1.DataSource = socios;
+
+            var dependentes = db.DadosDependente();
+            dataGridView2.DataSource = dependentes;
+
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -96,6 +100,11 @@ namespace PJ_IN
         }
 
         private void TelaUsuario_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

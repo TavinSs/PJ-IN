@@ -66,7 +66,7 @@ namespace PJ_IN
 
         public List<Socio> DadosUsuario()
         {
-            string sql = "SELECT * FROM Socio s LEFT JOIN Dependente d ON s.Codigo = d.CodigoSocio JOIN SocioLogado sl ON s.Codigo = sl.CodigoSocio WHERE s.Codigo = CodigoLoginUsuario;";
+            string sql = "SELECT s.Nome, s.DataNascimento, s.Cpf, s.Telefone, s.Email, s.Numero, s.Complemento, s.Referencia FROM Socio s LEFT JOIN Dependente d ON s.Codigo = d.CodigoSocio JOIN SocioLogado sl ON s.Codigo = sl.CodigoSocio WHERE s.Codigo = CodigoLoginUsuario;";
             SqlCommand comando = new SqlCommand(sql, conn);
 
 
@@ -99,6 +99,38 @@ namespace PJ_IN
                 }
             }
             return socios;
+        }
+        public List<Dependente> DadosDependente()
+        {
+            string sql = "SELECT d.Nome, d.DataNascimento, d.Cpf, d.Telefone, d.Email FROM Socio s LEFT JOIN Dependente d ON s.Codigo = d.CodigoSocio JOIN SocioLogado sl ON s.Codigo = sl.CodigoSocio WHERE s.Codigo = CodigoLoginUsuario;";
+            SqlCommand comando = new SqlCommand(sql, conn);
+
+
+            List<Dependente> dependentes = new List<Dependente>();
+
+            using (var reader = comando.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var nomeDb = reader.GetString(reader.GetOrdinal("Nome"));
+                    var dataNascimentoDb = reader.GetDateTime(reader.GetOrdinal("DataNascimento"));
+                    var cpfDb = reader.GetString(reader.GetOrdinal("Cpf"));
+                    var telefoneDb = reader.GetString(reader.GetOrdinal("Telefone"));
+                    var emailDb = reader.GetString(reader.GetOrdinal("Email"));
+                
+                  
+                    dependentes.Add(new Dependente()
+                    {
+                        Nome = nomeDb,
+                        DataNascimento = dataNascimentoDb,
+                        Cpf = cpfDb,
+                        Telefone = telefoneDb,
+                        Email = emailDb,
+                       
+                    });
+                }
+            }
+            return dependentes;
         }
 
         public List<Fatura> DadosFatura()
