@@ -74,10 +74,15 @@ namespace PJ_IN
                 if (string.IsNullOrEmpty(novaSenha) || string.IsNullOrEmpty(confirmarSenha))
                 {
                     MessageBox.Show("Digite a nova senha e confirme-a.");
+                    TelaBemVindo bemVindo = new TelaBemVindo();
+                    bemVindo.ExibirMensagem("Digite a nova senha e confirme-a.");
+                    bemVindo.ShowDialog();
                 }
                 else if (novaSenha != confirmarSenha)
                 {
-                    MessageBox.Show("A nova senha e a confirmação não coincidem.");
+                    TelaBemVindo bemVindo = new TelaBemVindo();
+                    bemVindo.ExibirMensagem("A nova senha e a confirmação \nnão coincidem.");
+                    bemVindo.ShowDialog();
                 }
                 else if (novaSenha.Length < 3) 
                 {
@@ -96,7 +101,9 @@ namespace PJ_IN
                     comandoUsuario.Parameters.AddWithValue("@Usuario", usuario);
                     comandoUsuario.ExecuteNonQuery();
 
-                    MessageBox.Show("Senha Redefinida.");
+                    TelaBemVindo bemVindo = new TelaBemVindo();
+                    bemVindo.ExMensagem("Senha Redefinida.");
+                    bemVindo.ShowDialog();
 
                     TelaLogin telaLogin = new TelaLogin();
                     telaLogin.Show();
