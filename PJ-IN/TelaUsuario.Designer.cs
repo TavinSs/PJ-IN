@@ -33,13 +33,13 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
+            button5 = new Button();
             pictureBox3 = new PictureBox();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            button5 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -97,6 +97,20 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(272, 666);
             panel2.TabIndex = 17;
+            // 
+            // button5
+            // 
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.FromArgb(107, 72, 142);
+            button5.Location = new Point(0, 406);
+            button5.Name = "button5";
+            button5.Size = new Size(269, 59);
+            button5.TabIndex = 18;
+            button5.Text = "Faturas";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // pictureBox3
             // 
@@ -180,26 +194,12 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = SystemColors.Control;
-            dataGridView1.Location = new Point(349, 109);
+            dataGridView1.Location = new Point(381, 141);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(820, 423);
             dataGridView1.TabIndex = 18;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // button5
-            // 
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.FromArgb(107, 72, 142);
-            button5.Location = new Point(0, 406);
-            button5.Name = "button5";
-            button5.Size = new Size(269, 59);
-            button5.TabIndex = 18;
-            button5.Text = "Faturas";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
             // 
             // TelaUsuario
             // 

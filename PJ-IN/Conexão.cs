@@ -69,12 +69,13 @@ namespace PJ_IN
             string sql = "SELECT * FROM Socio";
             SqlCommand comando = new SqlCommand(sql, conn);
             List<Socio> socios = new List<Socio>();
+
             using (var reader = comando.ExecuteReader())
             {
                 while (reader.Read())
                 {
                     var nomeDb = reader.GetString(reader.GetOrdinal("Nome"));
-                    var dataNascimentoDb = reader.GetString(reader.GetOrdinal("DataNascimento"));
+                    var dataNascimentoDb = reader.GetDateTime(reader.GetOrdinal("DataNascimento"));
                     var cpfDb = reader.GetString(reader.GetOrdinal("Cpf"));
                     var telefoneDb = reader.GetString(reader.GetOrdinal("Telefone"));
                     var emailDb = reader.GetString(reader.GetOrdinal("Email"));
@@ -85,18 +86,30 @@ namespace PJ_IN
                     socios.Add(new Socio()
                     {
                         Nome = nomeDb,
-                        DataNascimento = dataNascimentoDb,
+                        DataNascimento = dataNascimentoDb.ToString(), 
                         Cpf = cpfDb,
                         Telefone = telefoneDb,
                         Email = emailDb,
                         Numero = numeroDb,
                         Complemento = complementoDb,
                         Referencia = referenciaDb,
-
                     });
                 }
-                return socios;
             }
+            return socios;
+        }
+
+        public bool BuscaUser(string usuario)
+        {
+            string sql = $"select * from LoginUsuario where Usuario = '{usuario}'";
+            SqlCommand comando = new SqlCommand(sql, conn);
+
+            var retorno = comando.ExecuteReader();
+
+            if (retorno.Read())
+                return true;
+
+            return false;
         }
     }
 }

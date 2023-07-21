@@ -32,6 +32,7 @@
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             button4 = new Button();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -75,18 +76,29 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.FromArgb(107, 72, 142);
-            button4.Location = new Point(70, 116);
+            button4.Location = new Point(70, 126);
             button4.Name = "button4";
-            button4.Size = new Size(170, 48);
+            button4.Size = new Size(170, 38);
             button4.TabIndex = 4;
             button4.Text = "OK";
             button4.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(107, 72, 142);
+            label2.Location = new Point(110, 81);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 21);
+            label2.TabIndex = 5;
             // 
             // TelaBemVindo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(320, 176);
+            Controls.Add(label2);
             Controls.Add(button4);
             Controls.Add(label1);
             Controls.Add(panel1);
@@ -106,5 +118,6 @@
         private Panel panel1;
         private PictureBox pictureBox2;
         private Button button4;
+        private Label label2;
     }
 }
