@@ -42,6 +42,9 @@
             button1=new Button();
             dataGridView1=new DataGridView();
             dataGridView2=new DataGridView();
+            Evento=new Label();
+            label1=new Label();
+            button6=new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -239,11 +242,52 @@
             dataGridView2.Size=new Size(937, 169);
             dataGridView2.TabIndex=19;
             // 
+            // Evento
+            // 
+            Evento.AutoSize=true;
+            Evento.Font=new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            Evento.ForeColor=Color.FromArgb(107, 72, 142);
+            Evento.Location=new Point(435, 125);
+            Evento.Name="Evento";
+            Evento.Size=new Size(281, 37);
+            Evento.TabIndex=20;
+            Evento.Text="DADOS DO SOCIO";
+            // 
+            // label1
+            // 
+            label1.AutoSize=true;
+            label1.Font=new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor=Color.FromArgb(107, 72, 142);
+            label1.Location=new Point(435, 405);
+            label1.Name="label1";
+            label1.Size=new Size(364, 37);
+            label1.TabIndex=21;
+            label1.Text="DADOS DO DEPENDENTE";
+            // 
+            // button6
+            // 
+            button6.BackColor=Color.FromArgb(107, 72, 142);
+            button6.FlatAppearance.BorderSize=0;
+            button6.FlatStyle=FlatStyle.Flat;
+            button6.Font=new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.ForeColor=Color.White;
+            button6.Location=new Point(435, 661);
+            button6.Margin=new Padding(3, 4, 3, 4);
+            button6.Name="button6";
+            button6.Size=new Size(307, 79);
+            button6.TabIndex=19;
+            button6.Text="Modificar Dependentes";
+            button6.UseVisualStyleBackColor=false;
+            button6.Click+=button6_Click;
+            // 
             // TelaUsuario
             // 
             AutoScaleDimensions=new SizeF(8F, 20F);
             AutoScaleMode=AutoScaleMode.Font;
             ClientSize=new Size(1486, 953);
+            Controls.Add(button6);
+            Controls.Add(label1);
+            Controls.Add(Evento);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(panel2);
@@ -262,6 +306,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -279,5 +324,8 @@
         private Button button5;
         private DataGridViewTextBoxColumn Nome;
         private DataGridView dataGridView2;
+        private Label Evento;
+        private Label label1;
+        private Button button6;
     }
 }

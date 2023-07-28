@@ -102,7 +102,7 @@
             panel2.Location=new Point(101, 219);
             panel2.Margin=new Padding(3, 4, 3, 4);
             panel2.Name="panel2";
-            panel2.Size=new Size(297, 407);
+            panel2.Size=new Size(341, 407);
             panel2.TabIndex=1;
             panel2.Click+=panel2_Click;
             panel2.Paint+=panel2_Paint;
@@ -151,7 +151,7 @@
             panel3.Location=new Point(862, 219);
             panel3.Margin=new Padding(3, 4, 3, 4);
             panel3.Name="panel3";
-            panel3.Size=new Size(297, 407);
+            panel3.Size=new Size(332, 407);
             panel3.TabIndex=2;
             panel3.Click+=panel3_Click;
             panel3.Paint+=panel3_Paint;
@@ -189,6 +189,7 @@
             label5.Size=new Size(345, 120);
             label5.TabIndex=2;
             label5.Text="Direito a toda estrutura do \nclube sem custo adicional, \ncom exceção da locação \ndos espaços de festas";
+            label5.Click+=label5_Click;
             // 
             // label2
             // 
@@ -211,7 +212,7 @@
             panel4.Location=new Point(481, 219);
             panel4.Margin=new Padding(3, 4, 3, 4);
             panel4.Name="panel4";
-            panel4.Size=new Size(297, 407);
+            panel4.Size=new Size(343, 407);
             panel4.TabIndex=2;
             panel4.Click+=panel4_Click;
             // 

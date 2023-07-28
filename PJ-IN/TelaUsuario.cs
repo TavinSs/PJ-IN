@@ -108,5 +108,12 @@ namespace PJ_IN
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TelaBemVindo telaBemVindo = new TelaBemVindo();
+            telaBemVindo.ExibirMensagem("Fora de operação");
+            telaBemVindo.Show();
+        }
     }
 }

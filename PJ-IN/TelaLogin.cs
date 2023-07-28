@@ -130,5 +130,10 @@ namespace PJ_IN
                 Location = new Point(Location.X + deltaX, Location.Y + deltaY);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -100,5 +100,12 @@ namespace PJ_IN
             var faturas = db.DadosFatura();
             dataGridView1.DataSource = faturas;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TelaBemVindo bemVindo = new TelaBemVindo();
+            bemVindo.ExibirMensagem("Boleto enviado por email");
+            bemVindo.Show();
+        }
     }
 }
